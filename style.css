@@ -43,6 +43,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .button {
@@ -60,9 +61,6 @@ body {
 .button.active {
     background-color: blue;
     border-color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .message {
@@ -79,10 +77,10 @@ body {
     margin-top: 20px;
 }
 
-/* Media Queries para dispositivos móveis */
+/* Media Queries */
 @media (max-width: 768px) {
     .title {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     .button {
@@ -91,12 +89,15 @@ body {
     }
 
     .container {
-        width: 90%;
         padding: 10px;
     }
 
     .input-container {
-        width: 100%;
         padding: 5px;
+    }
+
+    .row {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
