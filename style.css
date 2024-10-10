@@ -55,7 +55,7 @@ body {
     border-radius: 50%;
     background-color: transparent;
     border: 2px solid black;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
 .button.active {
