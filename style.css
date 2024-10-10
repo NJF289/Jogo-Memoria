@@ -59,23 +59,9 @@ body {
 }
 
 .button.active {
-    background-color: blue; border-color: blue;
-    background-color: red; border-color: red;
-    background-color: green; border-color: green;
-    background-color: yellow; border-color: yellow;
-    background-color: orange; border-color: orange;
-    background-color: purple; border-color: purple; 
-    background-color: pink; border-color: pink;
-    background-color: brown; border-color: brown;
-    background-color: gray; border-color: gray;
-    background-color: cyan; border-color: cyan;
-    background-color: magenta; border-color: magenta;
-    background-color: lime; border-color: lime;
-    background-color: teal; border-color: teal;
-    background-color: navy; border-color: navy;
-    background-color: olive; border-color: olive;
-    background-color: maroon; border-color: maroon;
 
+    background-color: lime; border-color: lime;
+    
 }
 
 .message {
