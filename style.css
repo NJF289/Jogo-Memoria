@@ -58,7 +58,7 @@ body {
     transition: background-color 0.2s, border-color 0.2s;
 }
 
-.button.active {
+.button1.active {
 
     background-color: lime; border-color: lime;
     
