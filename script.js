@@ -83,6 +83,17 @@ function updatePerformanceTable() {
     newRow.appendChild(roundCell);
     newRow.appendChild(dateCell);
     tableBody.appendChild(newRow);
+
+    // Enviar dados para o servidor
+    fetch('/saveData', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ playerName, date, round })
+    }).then(response => response.json())
+      .then(data => console.log('Success:', data))
+      .catch(error => console.error('Error:', error));
 }
 
 function resetGame() {
@@ -110,24 +121,4 @@ buttons.forEach((button, index) => {
             checkPlayerMove(index);
         }
     });
-});
-
-document.getElementById('exportButton').addEventListener('click', () => {
-    const table = document.getElementById('performanceTable');
-    let csvContent = 'Rodada,Data\n';
-    for (let i = 1; i < table.rows.length; i++) {
-        let rowData = [];
-        for (let cell of table.rows[i].cells) {
-            rowData.push(cell.textContent);
-        }
-        csvContent += rowData.join(',') + '\n';
-    }
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${playerName}_desempenho.csv`;
-    a.click();
-    URL.revokeObjectURL(url);
-	
 });
